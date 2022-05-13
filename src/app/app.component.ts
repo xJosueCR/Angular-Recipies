@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'recipies';
+  activeLink: string = 'recipies';
+  onButtonSelected(selectedButton: string){
+    this.activeLink = selectedButton
+  }
 }
