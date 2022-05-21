@@ -22,7 +22,7 @@ This Angular project has the objective to work with most core feautures of the f
 1. Data binding: communication between components using MVC approach.
 2. Directives: instructions directly in the DOM.
 3. Decorators: metadata to Angular.
-4. View encapsulation
-5. Local references
-6. Component lifecycle and comunnication 
-7. Services
+4. View encapsulation.
+5. Local references.
+6. Component lifecycle and comunnication.
+7. Services.
