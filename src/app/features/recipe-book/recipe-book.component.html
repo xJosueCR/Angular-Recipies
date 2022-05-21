@@ -5,12 +5,15 @@
     </div>
     <div class="col-md-7">
         <!-- List of details-->
-        <app-recipe-detail 
+        
+        <!-- Old approach
+         <app-recipe-detail 
         *ngIf="selectedRecipe; else noRecipeSelected"
         [recipe]="selectedRecipe"
         ></app-recipe-detail>
         <ng-template #noRecipeSelected>
             <p>Please select a recipe</p>
-        </ng-template>
+        </ng-template> -->
+        <router-outlet></router-outlet>
     </div>
 </div>
