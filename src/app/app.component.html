@@ -1,8 +1,7 @@
-<app-header (buttonClicked)="onButtonSelected($event)"></app-header>
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12"></div>
-    <app-recipe-book *ngIf="activeLink === 'recipies'"></app-recipe-book>
-    <app-shopping *ngIf="activeLink !== 'recipies'"></app-shopping>
+    <router-outlet></router-outlet>
   </div>
 </div>
