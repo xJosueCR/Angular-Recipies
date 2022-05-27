@@ -4,6 +4,8 @@ import { Recipe } from "../models/recipe.model"
 
 export class RecipeService {
     recipeSelected = new Subject<Recipe>();
+    recipesObservable = new Subject<Recipe[]>();
+
     private recipes: Recipe[] = [
         new Recipe('French Pasta',
             'Delicous french pasta for launch',
@@ -30,5 +32,21 @@ export class RecipeService {
     }
     getOneRecipie(id: number): Recipe{
         return this.recipes[id];
+    }
+    addRecipe(recipe: Recipe): number{
+        this.recipes.push(recipe)
+        this.notifyObservers()
+        return (this.recipes.length -1)
+    }
+    updateRecipe(index: number, recipe: Recipe){
+        this.recipes[index] = recipe
+        this.notifyObservers()
+    }
+    deleteRecipe(index: number){
+        this.recipes.splice(index, 1)
+        this.notifyObservers()
+    }
+    notifyObservers(){
+        this.recipesObservable.next(this.getRecipes())
     }
 }

@@ -11,6 +11,7 @@ export class ShoppingService {
         new Ingredient('Apples', 5),
         new Ingredient('Tomatoes', 5)
     ]
+    ingredientSelected = new Subject<number>()
     constructor() { }
 
     getIngredients(): Ingredient[] {
@@ -23,6 +24,24 @@ export class ShoppingService {
 
     addNewIngredients(ingredients: Ingredient[]) {
         this.ingredients.push(...ingredients)
+        this.ingredientAdded.next(this.ingredients.slice())
+    }
+
+    onIngredientSelected(id: number){
+        this.ingredientSelected.next(id)
+    }
+
+    getIngredientByIndex(index: number){
+        return this.ingredients[index]
+    }
+
+    deleteItem(deleteIndex: number){
+        this.ingredients.splice(deleteIndex, 1)
+        this.ingredientAdded.next(this.ingredients.slice())
+    }
+
+    updateIngredient(index: number, ingredient: Ingredient){
+        this.ingredients[index] = ingredient
         this.ingredientAdded.next(this.ingredients.slice())
     }
 }
