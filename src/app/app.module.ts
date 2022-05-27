@@ -11,7 +11,7 @@ import { IngredientComponent } from './components/ingredient/ingredient.componen
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ShoppingEditComponent } from './components/shopping-edit/shopping-edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownDirective } from './directives/dropdown/dropdown.directive';
 import { RecipeService } from './services/recipe.service';
 import { RecipeEditComponent } from './components/recipe-edit/recipe-edit.component';
@@ -37,7 +37,8 @@ import { RecipeStartComponent } from './components/recipe-start/recipe-start.com
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [RecipeService],
   bootstrap: [AppComponent]

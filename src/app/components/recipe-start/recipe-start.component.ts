@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { RecipeService } from 'src/app/services/recipe.service';
 
 @Component({
   selector: 'app-recipe-start',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeStartComponent implements OnInit {
 
-  constructor() { }
+  recipeForm: FormGroup
+  editMode: boolean = false
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
+    
   }
 
 }
