@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  title: 'Local server',
+  API_URL: 'https://recipes-22249-default-rtdb.firebaseio.com/'
 };
 
 /*

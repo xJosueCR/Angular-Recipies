@@ -1,4 +1,5 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { StorageService } from 'src/app/storage/storage.service';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +7,16 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output('buttonClicked') buttonClicked = new EventEmitter<string>();
-  constructor() { }
+
+  constructor(private storageService: StorageService) { }
 
   ngOnInit(): void {
   }
-  onButtonClicked(button: string){
-    this.buttonClicked.emit(button)
+  
+  onSaveData(){
+    this.storageService.storeRecipes()
+  }
+  onFetchData(){
+    this.storageService.fetchRecipes().subscribe()
   }
 }
