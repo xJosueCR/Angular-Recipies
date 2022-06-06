@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RecipeBookComponent } from './features/recipe-book/recipe-book.component';
@@ -11,7 +13,6 @@ import { IngredientComponent } from './components/ingredient/ingredient.componen
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ShoppingEditComponent } from './components/shopping-edit/shopping-edit.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownDirective } from './directives/dropdown/dropdown.directive';
 import { RecipeService } from './services/recipe.service';
 import { RecipeEditComponent } from './components/recipe-edit/recipe-edit.component';
@@ -38,9 +39,10 @@ import { RecipeStartComponent } from './components/recipe-start/recipe-start.com
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [RecipeService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
