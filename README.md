@@ -1,4 +1,4 @@
-# Recipies 
+# Recipes 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 The main idea is to practice some core concepts with Angular 
