@@ -1,0 +1,17 @@
+{
+  "hosting": {
+	 "site": "recipes-22249",
+    "public": "dist/recipies",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

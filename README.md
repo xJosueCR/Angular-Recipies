@@ -26,3 +26,13 @@ This Angular project has the objective to work with most core feautures of the f
 5. Local references.
 6. Component lifecycle and comunnication.
 7. Services.
+8. Authentication with Route Guards and routes resolvers
+9. Backend connection
+10. Modularity with modules
+11. Lazy loading to enhance performace
+12. Prelazy loading
+13. Angular deployment using firebase as static host
+
+You can visit the application `https://recipes-22249.web.app` and create your own user to explore the simple website
+
+Thanks for reading
