@@ -2,7 +2,7 @@ import { Component, OnInit, Output,EventEmitter, OnDestroy } from '@angular/core
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
 import { User } from 'src/app/auth/user.model';
-import { StorageService } from 'src/app/storage/storage.service';
+import { StorageService } from 'src/app/services/storage/storage.service';
 
 @Component({
   selector: 'app-header',
@@ -17,8 +17,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.userSubcription = this.authService.user.subscribe(user =>{
       this.isAuthenticated = !!user
-      console.log(!user)
-      console.log(!!user)
     })
   }
   
